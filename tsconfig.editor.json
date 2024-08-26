@@ -1,0 +1,10 @@
+{
+    "extends": "./tsconfig.json",
+    "files": [],
+    "include": ["**/*.ts"],
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "outDir": "dist/out-tsc",
+        "types": ["node", "jest"]
+    }
+}

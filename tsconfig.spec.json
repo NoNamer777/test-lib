@@ -1,0 +1,15 @@
+{
+    "extends": "./tsconfig.json",
+    "files": [
+        "lib/src/test.ts"
+    ],
+    "include": ["lib/**/*.spec.ts", "jest.config.ts"],
+    "compilerOptions": {
+        "declaration": true,
+        "emitDeclarationOnly": true,
+        "isolatedModules": true,
+        "module": "CommonJS",
+        "outDir": "dist/out-tsc",
+        "types": ["node", "jest"]
+    }
+}
