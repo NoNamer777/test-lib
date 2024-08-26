@@ -1,28 +1,5 @@
 import { extractDirectoryPath, extractFileName, isArrayEmpty } from '../../lib/utils';
 
-export const mockFsJest = () => ({
-    access: jest.fn().mockImplementation(async (filePath: string) => {
-        if (fsMock.fileExists(filePath)) return;
-        throw new Error();
-    }),
-    lstat: jest.fn().mockImplementation(async (directoryPath: string) => ({
-        isDirectory: () => fsMock.directoryExists(directoryPath),
-    })),
-    mkdir: jest.fn().mockImplementation(async (directoryPath: string) => fsMock.createDirectory(directoryPath)),
-    readdir: jest
-        .fn()
-        .mockImplementation(async (directoryPath: string) => fsMock.getFileNamesInDirectory(directoryPath)),
-    readFile: jest.fn().mockImplementation(async (filePath: string) => {
-        const contents = fsMock.readFile(filePath);
-
-        if (!contents) throw new Error();
-        return contents;
-    }),
-    writeFile: jest
-        .fn()
-        .mockImplementation(async (filePath: string, contents: string) => fsMock.writeFile(filePath, contents)),
-});
-
 export interface InMemoryFs {
     [key: string]: string | Buffer | InMemoryFs;
 }

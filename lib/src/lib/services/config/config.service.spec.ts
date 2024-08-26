@@ -1,11 +1,11 @@
-import { fsMock, InMemoryFs, mockFsJest, mockOsJest, mockProcessJest, withFiles, withOperatingSystem } from '@/testing';
+import { fsMock, InMemoryFs, withFiles, withOperatingSystem } from '@/testing';
 import * as fsPromises from 'fs/promises';
 import { ConfigService } from './config.service';
 import { AppConfig, defaultConfig } from './models';
 
-jest.mock('fs/promises', () => mockFsJest());
-jest.mock('os', () => mockOsJest());
-jest.mock('process', () => mockProcessJest());
+jest.mock('fs/promises');
+jest.mock('os');
+jest.mock('process');
 
 type ExactConfigProvider = { value: AppConfig };
 

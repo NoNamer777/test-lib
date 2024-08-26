@@ -1,9 +1,9 @@
-import { base64ToBuffer, fsMock, imageBlack10x10Jepg, InMemoryFs, mockFsJest, mockOsJest, withFiles } from '@/testing';
+import { base64ToBuffer, fsMock, imageBlack10x10Jepg, InMemoryFs, withFiles } from '@/testing';
 import * as fsPromises from 'fs/promises';
 import { FileService } from './file.service';
 
-jest.mock('fs/promises', () => mockFsJest());
-jest.mock('os', () => mockOsJest());
+jest.mock('fs/promises');
+jest.mock('os');
 
 describe('FileService', () => {
     const mockFileSystem: InMemoryFs = {
