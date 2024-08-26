@@ -21,7 +21,7 @@ describe('Utils', () => {
     //  but the actual implementation of the functions "isRunningOnWindows" and "isRunningOnMac",
     //  which use the "platform" function, don't return the mocked value
     //  thus resulting in a test failure. The mock is applied, it just doesn't register somehow
-    xit('should indicate that the current OS is Windows', () => {
+    it('should indicate that the current OS is Windows', () => {
         setupTest('win32');
 
         expect(isRunningOnWindows()).toEqual(true);
