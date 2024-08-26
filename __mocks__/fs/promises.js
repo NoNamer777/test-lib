@@ -1,4 +1,5 @@
-import {fsMock} from "../../lib/src/testing/mocks";
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const { fsMock } = require("../../lib/src/testing/mocks");
 
 const promises = jest.createMockFromModule('fs/promises');
 
@@ -25,4 +26,4 @@ promises.readFile = jest.fn(async (filePath) => {
 
 promises.writeFile = jest.fn(async (filePath, contents) => fsMock.writeFile(filePath, contents));
 
-export default promises;
+module.exports = promises;
