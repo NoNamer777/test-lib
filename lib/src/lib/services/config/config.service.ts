@@ -36,7 +36,7 @@ export class ConfigService {
         let fileContents: string;
 
         try {
-            fileContents = await this.fileService.getFile(this.configPath);
+            fileContents = (await this.fileService.getFile(this.configPath)) as string;
         } catch (_error) {
             if (!(await this.fileService.doesFileExist(this.configPath))) {
                 this.config = { ...defaultConfig };
