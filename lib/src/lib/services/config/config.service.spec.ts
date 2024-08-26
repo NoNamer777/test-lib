@@ -5,7 +5,6 @@ import { AppConfig, defaultConfig } from './models';
 
 jest.mock('fs/promises');
 jest.mock('os');
-jest.mock('process');
 
 type ExactConfigProvider = { value: AppConfig };
 
