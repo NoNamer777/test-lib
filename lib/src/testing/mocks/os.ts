@@ -1,11 +1,7 @@
 export type ValidOperatingSystem = 'darwin' | 'win32';
 
-export let operatingSystem: ValidOperatingSystem = 'darwin';
+export let operatingSystem: ValidOperatingSystem;
 
-export function withOperatingSystem(os: ValidOperatingSystem = 'darwin') {
-    operatingSystem = os;
-}
+export const withOperatingSystem = (os: ValidOperatingSystem = 'darwin') => (operatingSystem = os);
 
-export function resetOperatingSystem() {
-    operatingSystem = 'darwin';
-}
+export const resetOperatingSystem = () => (operatingSystem = 'darwin');
