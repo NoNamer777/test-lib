@@ -25,6 +25,9 @@ const jestConfig: Config = {
     showSeed: true,
     testEnvironment: 'node',
     testRegex: '.*.spec.ts$',
+    transform: {
+        '^.+\\.[tj]s$': ['ts-jest', { tsconfig: './tsconfig.spec.json' }],
+    },
 };
 
 export default jestConfig;
