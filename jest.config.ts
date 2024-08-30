@@ -18,13 +18,9 @@ const jestConfig: Config = {
     maxConcurrency: 1,
     maxWorkers: 1,
     moduleFileExtensions: ['ts', 'js'],
-    moduleNameMapper: {
-        '@/testing': '<rootDir>/lib/src/testing/public-api.ts',
-    },
     passWithNoTests: true,
     randomize: true,
     reporters: ['default'],
-    rootDir: '.',
     setupFilesAfterEnv: ['<rootDir>/lib/src/test.ts'],
     showSeed: true,
     testEnvironment: 'node',

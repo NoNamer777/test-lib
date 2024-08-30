@@ -1,5 +1,5 @@
 // eslint-disable-next-line @typescript-eslint/no-require-imports
-const { operatingSystem } = require('../lib/src/testing/mocks');
+const { operatingSystem } = require('../lib/src/testing/mocks/os');
 
 const process = jest.createMockFromModule('process');
 

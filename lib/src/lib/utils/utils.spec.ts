@@ -1,5 +1,5 @@
-import { ValidOperatingSystem, withOperatingSystem } from '@/testing';
-import { isRunningOnMac, isRunningOnWindows } from './utils';
+import { ValidOperatingSystem, withOperatingSystem } from '../../testing/mocks/os';
+import { isArrayEmpty, isRunningOnMac, isRunningOnWindows } from './utils';
 
 jest.mock('os');
 
@@ -15,16 +15,15 @@ describe('Utils', () => {
         expect(isRunningOnMac()).toEqual(true);
     });
 
-    // TODO: Fix test
-    //  For some reason the os mock is not being applied correctly.
-    //  Within the unit test, when using the "platform" function directly inside the test, it returns the mocked value,
-    //  but the actual implementation of the functions "isRunningOnWindows" and "isRunningOnMac",
-    //  which use the "platform" function, don't return the mocked value
-    //  thus resulting in a test failure. The mock is applied, it just doesn't register somehow
     it('should indicate that the current OS is Windows', () => {
         setupTest('win32');
 
         expect(isRunningOnWindows()).toEqual(true);
         expect(isRunningOnMac()).toEqual(false);
+    });
+
+    it('should return that array is empty', () => {
+        expect(isArrayEmpty([])).toEqual(true);
+        expect(isArrayEmpty(['test'])).toEqual(false);
     });
 });

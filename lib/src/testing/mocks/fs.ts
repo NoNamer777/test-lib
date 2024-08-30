@@ -1,4 +1,5 @@
-import { extractDirectoryPath, extractFileName, isArrayEmpty } from '../../lib/utils';
+import { extractDirectoryPath, extractFileName } from '../../lib/utils/path/path';
+import { isArrayEmpty } from '../../lib/utils/utils';
 
 export interface InMemoryFs {
     [key: string]: string | Buffer | InMemoryFs;

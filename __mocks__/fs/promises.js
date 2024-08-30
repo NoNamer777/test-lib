@@ -1,5 +1,5 @@
 // eslint-disable-next-line @typescript-eslint/no-require-imports
-const { fsMock } = require("../../lib/src/testing/mocks");
+const { fsMock } = require("../../lib/src/testing/mocks/fs");
 
 const promises = jest.createMockFromModule('fs/promises');
 

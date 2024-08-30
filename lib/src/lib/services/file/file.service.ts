@@ -1,6 +1,6 @@
 import { access, lstat, mkdir, readdir, readFile, writeFile } from 'fs/promises';
 import { normalize } from 'path';
-import { extractDirectoryPath, isBinaryFile, isTextFile, isValidFilePath, isValidPath } from '../../utils';
+import { extractDirectoryPath, isBinaryFile, isTextFile, isValidFilePath, isValidPath } from '../../utils/path/path';
 
 export class FileService {
     public static instance() {

@@ -1,5 +1,5 @@
-import { fsMock, InMemoryFs, withFiles, withOperatingSystem } from '@/testing';
 import * as fsPromises from 'fs/promises';
+import { fsMock, InMemoryFs, withFiles } from '../../../testing/mocks/fs';
 import { ConfigService } from './config.service';
 import { AppConfig, defaultConfig } from './models';
 
@@ -19,8 +19,6 @@ interface TestParams {
 
 describe('ConfigService', () => {
     async function setupTest(params: TestParams = {}) {
-        withOperatingSystem();
-
         const fileSystemState: InMemoryFs = {};
 
         if (params.config) {

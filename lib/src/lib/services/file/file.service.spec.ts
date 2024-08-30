@@ -1,5 +1,6 @@
-import { base64ToBuffer, fsMock, imageBlack10x10Jepg, InMemoryFs, withFiles } from '@/testing';
 import * as fsPromises from 'fs/promises';
+import { fsMock, InMemoryFs, withFiles } from '../../../testing/mocks/fs';
+import { base64ToBuffer, imageBlack10x10Jepg } from '../../../testing/mocks/image';
 import { FileService } from './file.service';
 
 jest.mock('fs/promises');

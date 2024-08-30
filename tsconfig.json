@@ -22,10 +22,6 @@
         "noUncheckedIndexedAccess": true,
         "noUnusedLocals": true,
         "noUnusedParameters": true,
-        "paths": {
-            "@": ["lib/src/lib/public-api.ts"],
-            "@/testing": ["lib/src/testing/public-api.ts"]
-        },
         "rootDir": ".",
         "skipDefaultLibCheck": true,
         "skipLibCheck": true,

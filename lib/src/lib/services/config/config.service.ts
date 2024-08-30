@@ -1,16 +1,13 @@
 import { join } from 'path';
-import { jsonToString } from '../../utils';
+import { jsonToString } from '../../utils/utils';
 import { FileService } from '../file/file.service';
 import { AppConfig, AppConfigSchema, AppSetting, defaultConfig } from './models';
 
 export class ConfigService {
     public static instance() {
-        if (!this._instance) {
-            this._instance = new ConfigService();
-        }
+        if (!this._instance) this._instance = new ConfigService();
         return this._instance;
     }
-
     private static _instance: ConfigService;
 
     private readonly fileService = FileService.instance();

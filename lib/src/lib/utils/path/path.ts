@@ -1,5 +1,5 @@
 import { normalize, sep } from 'path';
-import { isArrayEmpty } from '../array/array';
+import { isArrayEmpty } from '../utils';
 
 /**
  * Extracts the path of the directory from a file path.

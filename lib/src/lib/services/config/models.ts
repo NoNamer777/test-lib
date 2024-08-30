@@ -2,7 +2,7 @@ import { homedir } from 'os';
 import { join } from 'path';
 import { cwd } from 'process';
 import { z } from 'zod';
-import { isRunningOnWindows } from '../../utils';
+import { isRunningOnWindows } from '../../utils/utils';
 
 export const AppConfigSchema = z
     .object({
