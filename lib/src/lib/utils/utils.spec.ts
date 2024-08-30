@@ -1,7 +1,7 @@
 import { ValidOperatingSystem, withOperatingSystem } from '../../testing/mocks/os';
 import { isArrayEmpty, isRunningOnMac, isRunningOnWindows } from './utils';
 
-jest.mock('os');
+jest.mock('process');
 
 describe('Utils', () => {
     function setupTest(os?: ValidOperatingSystem) {
