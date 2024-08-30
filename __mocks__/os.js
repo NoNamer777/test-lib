@@ -1,9 +1,5 @@
 const osMock = jest.createMockFromModule('os');
 
-const os = jest.createMockFromModule('os');
+osMock.homedir = jest.fn(() => 'home');
 
-os.platform = jest.fn(() => operatingSystem);
-
-os.homedir = jest.fn(() => 'home');
-
-module.exports = os;
+module.exports = osMock;
